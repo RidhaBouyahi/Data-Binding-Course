@@ -2,6 +2,6 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <Text text="Hi, my name is Harry Hawk"/>
+        <Text text="{data>/greetingText}"/>
     </Page>
 </mvc:View>

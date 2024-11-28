@@ -1,7 +1,17 @@
 <mvc:View controllerName="dbdemo.cwddatabinding.controller.Overview"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <Text text="{data>/greetingText}"/>
+        <Panel headerText="{data>/panelHeaderText}" class="sapUiResponsiveMargin" width="auto">
+            <form:SimpleForm editable="true" layout="ColumnLayout">
+                <Label text="{i18n>firstName}" />
+                <Input value="{data>/firstName}" valueLiveUpdate="true" width="200px" enabled="{data>/enabled}"/>
+                <Label text="{i18n>lastName}" />
+                <Input value="{data>/lastName}" valueLiveUpdate="true" width="200px" enabled="{data>/enabled}"/>
+                <Label text="{i18n>enabledText}" />
+                <CheckBox selected="{data>/enabled}"/>
+            </form:SimpleForm>
+        </Panel>
     </Page>
 </mvc:View>

@@ -1,0 +1,7 @@
+<mvc:View controllerName="dbdemo.cwddatabinding.controller.Overview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Text text="Hi, my name is Harry Hawk"/>
+    </Page>
+</mvc:View>

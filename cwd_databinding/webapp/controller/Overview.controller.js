@@ -3,7 +3,7 @@ sap.ui.define([
 ], (Controller) => {
     "use strict";
 
-    return Controller.extend("dbdemo.cwddatabinding.controller.View1", {
+    return Controller.extend("dbdemo.cwddatabinding.controller.Overview", {
         onInit() {
         }
     });

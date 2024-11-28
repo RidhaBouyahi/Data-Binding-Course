@@ -16,9 +16,6 @@ sap.ui.define([
             // call the base component's init function
             UIComponent.prototype.init.apply(this, arguments);
 
-            //One-Way Data Binding for the model data
-            this.getModel("data").setDefaultBindingMode("OneWay");
-
             // set the device model
             this.setModel(models.createDeviceModel(), "device");
 

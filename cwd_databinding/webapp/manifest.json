@@ -49,10 +49,15 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "dbdemo.cwddatabinding.i18n.i18n"
+          "bundleName": "dbdemo.cwddatabinding.i18n.i18n",
+          "supportedLocales": [
+            "",
+            "de"
+          ],
+          "fallbackLocale": ""
         }
       },
-      "data":{
+      "data": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "./model/Data.json"
       }

@@ -2,6 +2,7 @@
     controllerName="dbdemo.cwddatabinding.controller.Overview"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:form="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
     xmlns="sap.m"
 >
     <Page
@@ -34,6 +35,26 @@
                 <Label text="{i18n>enabledText}" />
                 <CheckBox selected="{data>/enabled}" />
             </form:SimpleForm>
+        </Panel>
+        <Panel
+            headerText="{i18n>panel2HeaderText}"
+            class="sapUiResponsiveMargin"
+            width="auto"
+        >
+            <content>
+                <l:VerticalLayout>
+                    <Label
+                        labelFor="adress"
+                        text="{i18n>address}"
+                    />
+                    <FormattedText
+                        class="sapUiSmallMargingBottom"
+                        htmlText="{data>/address/street}&lt;br>{data>/address/zip} {data>/address/city}&lt;br>{data>/address/country}"
+                        id="adress"
+                        width="200px"
+                    />
+                </l:VerticalLayout>
+            </content>
         </Panel>
     </Page>
 </mvc:View>

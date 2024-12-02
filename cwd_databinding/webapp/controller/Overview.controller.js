@@ -9,6 +9,13 @@ sap.ui.define([
         formatter : formatter,
         formatterValue : formatterValue,
         onInit() {
+        },
+        onItemSelected(oEvent) {
+            var oSelectedItem = oEvent.getSource(); 
+            var obindingCtx = oSelectedItem.getBindingContext("products");
+            var sPath = obindingCtx.getPath();
+            var oProductDetailPanel = this.byId("productDetailsPanel");
+            oProductDetailPanel.bindElement({path : sPath, model : "products"});
         }
     });
 });
